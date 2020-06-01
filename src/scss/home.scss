@@ -1,1 +1,70 @@
 @use './global.scss';
+
+.noscroll {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15rem;
+  background-color: transparent;
+  z-index: 40;
+
+  .navbar__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar__link {
+    width: 18rem;
+    cursor: pointer;
+  }
+
+  .navbar__toggle {
+    z-index: 50;
+  }
+
+  .navbar__button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.nav {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: global.$red;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 20rem;
+
+    @media (min-width: 768px) {
+      width: 40rem;
+    }
+
+    & svg path {
+      fill: global.$navy;
+    }
+  }
+}
