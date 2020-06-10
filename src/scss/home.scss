@@ -8,10 +8,10 @@ img {
 .container {
   max-width: 116rem;
   margin: 0 auto;
-  flex: 1;
   align-self: flex-end;
 }
 
+// general styles for all sections
 .hero,
 .s1,
 .s2,
@@ -39,12 +39,31 @@ img {
   }
 }
 
-// .s1:hover .s1-project-link {
-// }
-
 .s1,
 .s3,
 .s4 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(transparent, colors.$off-black);
+    z-index: 0;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-img {
+    z-index: 10;
+  }
+
   &-type {
     position: relative;
     margin-bottom: 1.8rem;
@@ -82,6 +101,10 @@ img {
   .s2,
   .s3,
   .s4 {
+    &::after {
+      display: none;
+    }
+
     &-content {
       padding: 0 3rem;
       margin-bottom: 5.2rem;
@@ -118,6 +141,7 @@ img {
   }
 }
 
+// hero banner
 .hero {
   background-color: colors.$violet;
   color: colors.$pink;
@@ -166,6 +190,7 @@ img {
   }
 }
 
+// henley financial project
 .s1 {
   background-color: colors.$lavender;
   color: colors.$white;
@@ -194,6 +219,7 @@ img {
   }
 }
 
+// yellow section
 .s2 {
   background-color: colors.$yellow;
   color: colors.$violet;
@@ -220,6 +246,7 @@ img {
   }
 }
 
+// wespeak project
 .s3 {
   background-color: colors.$deep-purple;
   color: colors.$white;
@@ -241,13 +268,14 @@ img {
   @media (min-width: 1024px) {
     &-img {
       top: unset;
-      bottom: 3rem;
+      bottom: 3.2rem;
       right: 5%;
       width: 50%;
     }
   }
 }
 
+// design action plan
 .s4 {
   background-color: colors.$pale-pink;
   color: colors.$white;
@@ -257,12 +285,12 @@ img {
     top: 0;
     right: 0;
     object-fit: cover;
-    width: 80%;
+    width: 90%;
   }
 
   @media (min-width: 768px) {
     &-img {
-      width: 60%;
+      width: 70%;
     }
   }
 
@@ -271,7 +299,7 @@ img {
       top: unset;
       bottom: 3.2rem;
       right: 0;
-      width: 50%;
+      width: 55%;
     }
   }
 }

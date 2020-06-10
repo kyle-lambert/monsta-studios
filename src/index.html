@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monsta Studios</title>
     <link rel="icon" href="./assets/monsta-favicon.svg" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
     <script src="js/index.js" defer></script>
   </head>
   <body>
-    <main>
+    <main class="main">
       <section class="hero">
         <div class="container">
           <div class="hero-content">
@@ -25,7 +27,7 @@
       </section>
 
       <!-- Section 1: Henley Financial -->
-      <section class="s1">
+      <section class="s1" data-gsap="s1-panel">
         <div class="container">
           <div class="s1-content">
             <div class="s1-type">Our Work</div>
@@ -36,7 +38,7 @@
             <a href="/" class="s1-project-link">See this project</a>
           </div>
         </div>
-        <img src="./assets/henley-image.png" alt="" class="s1-img" />
+        <img src="./assets/henley-image.png" alt="" class="s1-img" data-gsap="s1-img" />
       </section>
 
       <!-- Section 2: Ideas -->
@@ -55,7 +57,7 @@
       </section>
 
       <!-- Section 3: WeSpeak -->
-      <section class="s3">
+      <section class="s3" data-gsap="s3-panel">
         <div class="container">
           <div class="s3-content">
             <div class="s3-type">Our Work</div>
@@ -68,7 +70,7 @@
             </p>
             <a href="/" class="s3-project-link">See this project</a>
           </div>
-          <img src="./assets/wespeak-image.png" alt="" class="s3-img" />
+          <img src="./assets/wespeak-image.png" alt="" class="s3-img" data-gsap="s3-img" />
         </div>
       </section>
 
